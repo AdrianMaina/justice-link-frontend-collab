@@ -1,0 +1,27 @@
+
+name: 'Build Check'
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        working-directory: ./adrianmaina/justice-link-frontend/justice-link-frontend-9b879d46107acebac929200325adc07c06aa508d
+        run: npm install
+
+      - name: Run Build
+        working-directory: ./adrianmaina/justice-link-frontend/justice-link-frontend-9b879d46107acebac929200325adc07c06aa508d
+        run: npm run build
