@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from './context/AuthContext';
-import Navigation from './components/Navigation';
-import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import IncidentReportingPage from './pages/IncidentReportingPage';
-import MyReportsPage from './pages/MyReportsPage';
-import NewsPage from './pages/NewsPage';
-import AdminPage from './pages/AdminPage';
+import Navigation from './src/components/Navigation'; // Corrected import path
+import HomePage from './src/pages/HomePage';
+import LoginPage from './src/pages/LoginPage';
+import SignupPage from './src/pages/SignupPage';
+import IncidentReportingPage from './src/pages/IncidentReportingPage';
+import MyReportsPage from './src/pages/MyReportsPage';
+import NewsPage from './src/pages/NewsPage';
+import AdminPage from './src/pages/AdminPage';
 
 export default function App() {
     const [activeSection, setActiveSection] = useState('home');
@@ -15,7 +15,7 @@ export default function App() {
 
     const navigateTo = (section) => {
         if ((section === 'report' || section === 'admin' || section === 'my-reports') && !isAuthenticated) {
-            setActiveSection('login'); 
+            setActiveSection('login');
         } else {
             setActiveSection(section);
         }
