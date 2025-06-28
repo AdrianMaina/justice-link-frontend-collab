@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from './context/AuthContext';
-import Navigation from './src/components/Navigation'; // Corrected import path
-import HomePage from './src/pages/HomePage';
-import LoginPage from './src/pages/LoginPage';
-import SignupPage from './src/pages/SignupPage';
-import IncidentReportingPage from './src/pages/IncidentReportingPage';
-import MyReportsPage from './src/pages/MyReportsPage';
-import NewsPage from './src/pages/NewsPage';
-import AdminPage from './src/pages/AdminPage';
+import Navigation from './components/Navigation'; // Corrected
+import HomePage from './pages/HomePage'; // Corrected
+import LoginPage from './pages/LoginPage'; // Corrected
+import SignupPage from './pages/SignupPage'; // Corrected
+import IncidentReportingPage from './pages/IncidentReportingPage'; // Corrected
+import MyReportsPage from './pages/MyReportsPage'; // Corrected
+import NewsPage from './pages/NewsPage'; // Corrected
+import AdminPage from './pages/AdminPage'; // Corrected
 
 export default function App() {
     const [activeSection, setActiveSection] = useState('home');
