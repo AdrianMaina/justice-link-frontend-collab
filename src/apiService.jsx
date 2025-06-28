@@ -1,6 +1,6 @@
 // This service will centralize all our API calls
 
-const API_URL = 'http://127.0.0.1:5000/api';
+const API_URL = 'https://justice-link-backend-collab.onrender.com/api';
 
 const getAuthToken = () => {
     return localStorage.getItem('token');
